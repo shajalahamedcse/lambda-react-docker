@@ -1,0 +1,56 @@
+service: movie-rating-system
+
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  profile: serverlessUser
+  lambdaHashingVersion: 20201221
+  region: ap-southeast-2
+  environment:
+    tableName: ${self:custom.tableName}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+      Resource: "*"
+custom:
+  tableName: auth
+
+functions:
+  signUp:
+    handler: src/endpoints/signup.handler
+    events:
+      - http:
+          path: signup
+          method: POST
+          cors: false
+  login:
+    handler: src/endpoints/login.handler
+    events:
+      - http:
+          path: login
+          method: POST
+          cors: false
+  addNewFavourite:
+    handler: src/endpoints/add-favourite.handler
+    events:
+      - http:
+          path: add-new-favourite
+          method: POST
+          cors: false
+  getFavourites:
+    handler: src/endpoints/get-favourites.handler
+    events:
+      - http:
+          path: get-favourites/{ID}
+          method: GET
+          cors: false
+  authenticate:
+    handler: src/endpoints/authenticate.handler
+    events:
+      - http:
+          path: authenticate
+          method: GET
+          cors: false
