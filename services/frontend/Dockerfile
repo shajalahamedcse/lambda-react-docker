@@ -15,7 +15,7 @@ ENV PATH /usr/src/app/node_modules/.bin:$PATH
 COPY package.json .
 COPY package-lock.json .
 RUN npm ci
-RUN npm install react-scripts@4.0.0 --silent
+RUN npm install 
 
 
 # set environment variables
