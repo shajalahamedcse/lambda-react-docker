@@ -114,7 +114,7 @@ version: 0.2
 
 env:
   variables:
-    AWS_REGION: "us-west-1"
+    AWS_REGION: "ap-southeast-2"
     <!-- REACT_APP_API_SERVICE_URL: "http://localhost:5004" -->
 
 phases:
@@ -149,3 +149,91 @@ Commit and push your code to GitHub to trigger a new build. This time you should
 An error occurred (AccessDeniedException) when calling the GetAuthorizationToken operation:
 User: <omitted> is not authorized to perform: ecr:GetAuthorizationToken on resource: *
 To fix, add the AmazonEC2ContainerRegistryPowerUser policy to the service role in the IAM dashboard.
+
+
+## Elastic Load Balancer
+
+In the chapter, we'll add a load balancer to distribute traffic and create a more reliable app with automatic scaling and failover.
+
+
+### ELB
+The Elastic Load Balancer (ELB) distributes incoming application traffic and scales resources as needed to meet traffic needs.
+
+A load balancer is one of (if not) the most important parts of your application since it needs to always be up, routing traffic to healthy services, and ready to scale at a moment’s notice.
+
+### Load balancers:
+
+    * Enable horizontal scaling
+    * Improve throughput, which can help decrease latency
+    * Prevent the overloading of a single service
+    * Provide a framework for updating service on the fly
+    * Improve tolerance for back-end failures
+  
+There are currently three types of Elastic Load Balancers to choose from. We’ll be using the Application Load Balancer since it works at layer 7 of the OSI networking model, so it's designed for web applications that accept HTTP and HTTPS traffic. It provides support for path-based routing and dynamic port-mapping and it also enables zero-downtime deployments and support for A/B testing. The Application Load Balancer is one of those AWS services that makes ECS so powerful. In fact, before it’s release, ECS was not a viable container orchestration solution.
+
+##### Configure ALB
+Navigate to Amazon EC2, click "Load Balancers" on the sidebar, and then click the "Create Load Balancer" button. Select the "Create" button under "Application Load Balancer".
+
+##### Step 1: Configure Load Balancer
+
+    * "Name": frontend
+    * "Scheme": internet-facing
+    * "IP address type": ipv4
+    * "Listeners": HTTP / Port 80
+    * "VPC": Select the default VPC to keep things simple
+    * "Availability Zones": Select at least two available subnets
+
+```
+Availability Zones are clusters of data centers.
+```
+
+image
+
+##### Step 2: Configure Security Groups
+Select an existing Security Group or create a new Security Group (akin to a firewall) called default, making sure at least HTTP 80 and SSH 22 are open.
+
+##### Step 3: Configure Routing
+    * "Name": frontend-tg
+    * "Target type": Instance
+    * "Port": 80
+    * "Path": /
+
+##### Step 4: Register Targets
+
+Do not assign any instances manually since this will be managed by ECS. Review and then create the new load balancer.
+
+
+
+With that, we also need to set up Target Groups and Listeners:
+
+
+#### Target Groups
+
+Target Groups are attached to the Application Load Balancer and are used to route traffic to the containers found in the ECS Service.
+
+You may not have noticed, but a Target Group called flask-react-client-tg was already created (which we'll use for the client app) when we set up the Application Load Balancer, so we just need to set up one more for the users service.
+
+Within the EC2 Dashboard, click "Target Groups", and then create the following Target Group:
+
+    "Target type": Instances
+    "Target group name": frontend-tg
+    "Port": 5000
+    Then, under "Health check settings" set the "Path" to /.
+
+image
+
+You should now have the following Target Groups:
+
+image
+
+
+#### Listeners
+Back on the "Load Balancers" page within the EC2 Dashboard, select the flask-react-alb Load Balancer, and then click the "Listeners" tab. Here, we can add Listeners to the load balancer, which are then forwarded to a specific Target Group.
+
+There should already be a listener for "HTTP : 80". Click the "View/edit rules" link, and then insert a new rule that forwards to flask-react-users-tg with the following conditions: IF Path is /.
+Update CodeBuild
+Finally, navigate back to the Load Balancer and grab the "DNS name" from the "Description" tab:
+
+
+
+Commit and push your code to trigger a new build. Make sure new images are added to ECR once the build is done.
