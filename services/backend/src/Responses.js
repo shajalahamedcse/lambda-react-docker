@@ -3,10 +3,10 @@ const Responses = {
     return {
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Headers":
-          "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
+        "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
         "Access-Control-Allow-Methods": "*",
         "Access-Control-Allow-Credentials": true,
+        // "Access-Control-Allow-Origin": "http://frontend-657412319.ap-southeast-2.elb.amazonaws.com",
         "Access-Control-Allow-Origin": "*",
         "Accept": "*/*",
         "X-Requested-With": "*",
@@ -20,8 +20,7 @@ const Responses = {
     return {
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Headers":
-          "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
+        "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
         "Access-Control-Allow-Methods": "*",
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin": "*",

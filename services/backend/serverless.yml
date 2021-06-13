@@ -5,7 +5,7 @@ frameworkVersion: "2"
 provider:
   name: aws
   runtime: nodejs12.x
-  profile: serverlessUser
+  profile: ServerlessUser
   lambdaHashingVersion: 20201221
   region: ap-southeast-2
   environment:
@@ -25,32 +25,33 @@ functions:
       - http:
           path: signup
           method: POST
-          cors: false
+          cors: 
+            origin: 'http://frontend-657412319.ap-southeast-2.elb.amazonaws.com'
   login:
     handler: src/endpoints/login.handler
     events:
       - http:
           path: login
           method: POST
-          cors: false
+          cors: true
   addNewFavourite:
     handler: src/endpoints/add-favourite.handler
     events:
       - http:
           path: add-new-favourite
           method: POST
-          cors: false
+          cors: true
   getFavourites:
     handler: src/endpoints/get-favourites.handler
     events:
       - http:
           path: get-favourites/{ID}
           method: GET
-          cors: false
+          cors: true
   authenticate:
     handler: src/endpoints/authenticate.handler
     events:
       - http:
           path: authenticate
           method: GET
-          cors: false
+          cors: true

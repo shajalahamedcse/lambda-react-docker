@@ -7,7 +7,7 @@
     "provider": {
       "name": "aws",
       "runtime": "nodejs12.x",
-      "profile": "serverlessUser",
+      "profile": "ServerlessUser",
       "lambdaHashingVersion": "20201221",
       "region": "ap-southeast-2",
       "environment": {
@@ -214,7 +214,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/movie-rating-system/dev/1623309372695-2021-06-10T07:16:12.695Z/movie-rating-system.zip"
+                "S3Key": "serverless/movie-rating-system/dev/1623593687803-2021-06-13T14:14:47.803Z/movie-rating-system.zip"
               },
               "Handler": "src/endpoints/signup.handler",
               "Runtime": "nodejs12.x",
@@ -244,7 +244,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/movie-rating-system/dev/1623309372695-2021-06-10T07:16:12.695Z/movie-rating-system.zip"
+                "S3Key": "serverless/movie-rating-system/dev/1623593687803-2021-06-13T14:14:47.803Z/movie-rating-system.zip"
               },
               "Handler": "src/endpoints/login.handler",
               "Runtime": "nodejs12.x",
@@ -274,7 +274,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/movie-rating-system/dev/1623309372695-2021-06-10T07:16:12.695Z/movie-rating-system.zip"
+                "S3Key": "serverless/movie-rating-system/dev/1623593687803-2021-06-13T14:14:47.803Z/movie-rating-system.zip"
               },
               "Handler": "src/endpoints/add-favourite.handler",
               "Runtime": "nodejs12.x",
@@ -304,7 +304,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/movie-rating-system/dev/1623309372695-2021-06-10T07:16:12.695Z/movie-rating-system.zip"
+                "S3Key": "serverless/movie-rating-system/dev/1623593687803-2021-06-13T14:14:47.803Z/movie-rating-system.zip"
               },
               "Handler": "src/endpoints/get-favourites.handler",
               "Runtime": "nodejs12.x",
@@ -334,7 +334,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/movie-rating-system/dev/1623309372695-2021-06-10T07:16:12.695Z/movie-rating-system.zip"
+                "S3Key": "serverless/movie-rating-system/dev/1623593687803-2021-06-13T14:14:47.803Z/movie-rating-system.zip"
               },
               "Handler": "src/endpoints/authenticate.handler",
               "Runtime": "nodejs12.x",
@@ -357,54 +357,54 @@
               "AuthenticateLogGroup"
             ]
           },
-          "SignUpLambdaVersiono2yJDtYjRQVKXc6oGyUWz7Ym9lubvw9cJ1JcbmE": {
+          "SignUpLambdaVersion15erJokQbycYrzN7l0XFoAKRwntR42KmxIa3Y32Q": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "SignUpLambdaFunction"
               },
-              "CodeSha256": "xpawNmU9gEttlew0tN9zhJrJe7K6LCNR3ld+zwx70sM="
+              "CodeSha256": "HMyukcWIPYfcQKNCAs2XPEu4fN/5KELsShIiZlOUn8s="
             }
           },
-          "LoginLambdaVersion8kI7LKaxBIlUMOobowjMOc0pdK6cblHfBg2tDHnmU": {
+          "LoginLambdaVersionlwKqyTl0EDWycjgiPAvwo3VMp5T4tVt6LWMR9gDyeXo": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "LoginLambdaFunction"
               },
-              "CodeSha256": "xpawNmU9gEttlew0tN9zhJrJe7K6LCNR3ld+zwx70sM="
+              "CodeSha256": "HMyukcWIPYfcQKNCAs2XPEu4fN/5KELsShIiZlOUn8s="
             }
           },
-          "AddNewFavouriteLambdaVersionFhVurl0yhsNS3Fafrp9E7gZ641kIhIS9wPafAJqB4": {
+          "AddNewFavouriteLambdaVersionR9dwhKhI6GeAxblhkXzPDQl19YzbQSd9Uf73dDrvoE": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AddNewFavouriteLambdaFunction"
               },
-              "CodeSha256": "xpawNmU9gEttlew0tN9zhJrJe7K6LCNR3ld+zwx70sM="
+              "CodeSha256": "HMyukcWIPYfcQKNCAs2XPEu4fN/5KELsShIiZlOUn8s="
             }
           },
-          "GetFavouritesLambdaVersionfNuBASdrXjNyedP9dTjPbuiWxWreSmR9aUqudc1tEQ": {
+          "GetFavouritesLambdaVersionfSh1CIRVBEX1hZSrq8YrfIVAygjgjN5K62grSQRmJE": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetFavouritesLambdaFunction"
               },
-              "CodeSha256": "xpawNmU9gEttlew0tN9zhJrJe7K6LCNR3ld+zwx70sM="
+              "CodeSha256": "HMyukcWIPYfcQKNCAs2XPEu4fN/5KELsShIiZlOUn8s="
             }
           },
-          "AuthenticateLambdaVersionGrYROTX1xPbXia0iH1hLjrOX7kforQseGu78BLqWpw": {
+          "AuthenticateLambdaVersion4woEHD1jcPGWICsYpddvsRgOOT6gf7dBUcehK1CxDkk": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AuthenticateLambdaFunction"
               },
-              "CodeSha256": "xpawNmU9gEttlew0tN9zhJrJe7K6LCNR3ld+zwx70sM="
+              "CodeSha256": "HMyukcWIPYfcQKNCAs2XPEu4fN/5KELsShIiZlOUn8s="
             }
           },
           "ApiGatewayRestApi": {
@@ -501,6 +501,231 @@
                 ]
               },
               "PathPart": "authenticate",
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              }
+            }
+          },
+          "ApiGatewayMethodSignupOptions": {
+            "Type": "AWS::ApiGateway::Method",
+            "Properties": {
+              "AuthorizationType": "NONE",
+              "HttpMethod": "OPTIONS",
+              "MethodResponses": [
+                {
+                  "StatusCode": "200",
+                  "ResponseParameters": {
+                    "method.response.header.Access-Control-Allow-Origin": true,
+                    "method.response.header.Access-Control-Allow-Headers": true,
+                    "method.response.header.Access-Control-Allow-Methods": true
+                  },
+                  "ResponseModels": {}
+                }
+              ],
+              "RequestParameters": {},
+              "Integration": {
+                "Type": "MOCK",
+                "RequestTemplates": {
+                  "application/json": "{statusCode:200}"
+                },
+                "ContentHandling": "CONVERT_TO_TEXT",
+                "IntegrationResponses": [
+                  {
+                    "StatusCode": "200",
+                    "ResponseParameters": {
+                      "method.response.header.Access-Control-Allow-Origin": "'http://frontend-657412319.ap-southeast-2.elb.amazonaws.com'",
+                      "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
+                      "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST'"
+                    },
+                    "ResponseTemplates": {
+                      "application/json": ""
+                    }
+                  }
+                ]
+              },
+              "ResourceId": {
+                "Ref": "ApiGatewayResourceSignup"
+              },
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              }
+            }
+          },
+          "ApiGatewayMethodLoginOptions": {
+            "Type": "AWS::ApiGateway::Method",
+            "Properties": {
+              "AuthorizationType": "NONE",
+              "HttpMethod": "OPTIONS",
+              "MethodResponses": [
+                {
+                  "StatusCode": "200",
+                  "ResponseParameters": {
+                    "method.response.header.Access-Control-Allow-Origin": true,
+                    "method.response.header.Access-Control-Allow-Headers": true,
+                    "method.response.header.Access-Control-Allow-Methods": true
+                  },
+                  "ResponseModels": {}
+                }
+              ],
+              "RequestParameters": {},
+              "Integration": {
+                "Type": "MOCK",
+                "RequestTemplates": {
+                  "application/json": "{statusCode:200}"
+                },
+                "ContentHandling": "CONVERT_TO_TEXT",
+                "IntegrationResponses": [
+                  {
+                    "StatusCode": "200",
+                    "ResponseParameters": {
+                      "method.response.header.Access-Control-Allow-Origin": "'*'",
+                      "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
+                      "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST'"
+                    },
+                    "ResponseTemplates": {
+                      "application/json": "#set($origin = $input.params(\"Origin\"))\n#if($origin == \"\") #set($origin = $input.params(\"origin\")) #end\n#if($origin.matches(\".+\")) #set($context.responseOverride.header.Access-Control-Allow-Origin = $origin) #end"
+                    }
+                  }
+                ]
+              },
+              "ResourceId": {
+                "Ref": "ApiGatewayResourceLogin"
+              },
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              }
+            }
+          },
+          "ApiGatewayMethodAddDashnewDashfavouriteOptions": {
+            "Type": "AWS::ApiGateway::Method",
+            "Properties": {
+              "AuthorizationType": "NONE",
+              "HttpMethod": "OPTIONS",
+              "MethodResponses": [
+                {
+                  "StatusCode": "200",
+                  "ResponseParameters": {
+                    "method.response.header.Access-Control-Allow-Origin": true,
+                    "method.response.header.Access-Control-Allow-Headers": true,
+                    "method.response.header.Access-Control-Allow-Methods": true
+                  },
+                  "ResponseModels": {}
+                }
+              ],
+              "RequestParameters": {},
+              "Integration": {
+                "Type": "MOCK",
+                "RequestTemplates": {
+                  "application/json": "{statusCode:200}"
+                },
+                "ContentHandling": "CONVERT_TO_TEXT",
+                "IntegrationResponses": [
+                  {
+                    "StatusCode": "200",
+                    "ResponseParameters": {
+                      "method.response.header.Access-Control-Allow-Origin": "'*'",
+                      "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
+                      "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST'"
+                    },
+                    "ResponseTemplates": {
+                      "application/json": "#set($origin = $input.params(\"Origin\"))\n#if($origin == \"\") #set($origin = $input.params(\"origin\")) #end\n#if($origin.matches(\".+\")) #set($context.responseOverride.header.Access-Control-Allow-Origin = $origin) #end"
+                    }
+                  }
+                ]
+              },
+              "ResourceId": {
+                "Ref": "ApiGatewayResourceAddDashnewDashfavourite"
+              },
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              }
+            }
+          },
+          "ApiGatewayMethodGetDashfavouritesIdVarOptions": {
+            "Type": "AWS::ApiGateway::Method",
+            "Properties": {
+              "AuthorizationType": "NONE",
+              "HttpMethod": "OPTIONS",
+              "MethodResponses": [
+                {
+                  "StatusCode": "200",
+                  "ResponseParameters": {
+                    "method.response.header.Access-Control-Allow-Origin": true,
+                    "method.response.header.Access-Control-Allow-Headers": true,
+                    "method.response.header.Access-Control-Allow-Methods": true
+                  },
+                  "ResponseModels": {}
+                }
+              ],
+              "RequestParameters": {},
+              "Integration": {
+                "Type": "MOCK",
+                "RequestTemplates": {
+                  "application/json": "{statusCode:200}"
+                },
+                "ContentHandling": "CONVERT_TO_TEXT",
+                "IntegrationResponses": [
+                  {
+                    "StatusCode": "200",
+                    "ResponseParameters": {
+                      "method.response.header.Access-Control-Allow-Origin": "'*'",
+                      "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
+                      "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+                    },
+                    "ResponseTemplates": {
+                      "application/json": "#set($origin = $input.params(\"Origin\"))\n#if($origin == \"\") #set($origin = $input.params(\"origin\")) #end\n#if($origin.matches(\".+\")) #set($context.responseOverride.header.Access-Control-Allow-Origin = $origin) #end"
+                    }
+                  }
+                ]
+              },
+              "ResourceId": {
+                "Ref": "ApiGatewayResourceGetDashfavouritesIdVar"
+              },
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              }
+            }
+          },
+          "ApiGatewayMethodAuthenticateOptions": {
+            "Type": "AWS::ApiGateway::Method",
+            "Properties": {
+              "AuthorizationType": "NONE",
+              "HttpMethod": "OPTIONS",
+              "MethodResponses": [
+                {
+                  "StatusCode": "200",
+                  "ResponseParameters": {
+                    "method.response.header.Access-Control-Allow-Origin": true,
+                    "method.response.header.Access-Control-Allow-Headers": true,
+                    "method.response.header.Access-Control-Allow-Methods": true
+                  },
+                  "ResponseModels": {}
+                }
+              ],
+              "RequestParameters": {},
+              "Integration": {
+                "Type": "MOCK",
+                "RequestTemplates": {
+                  "application/json": "{statusCode:200}"
+                },
+                "ContentHandling": "CONVERT_TO_TEXT",
+                "IntegrationResponses": [
+                  {
+                    "StatusCode": "200",
+                    "ResponseParameters": {
+                      "method.response.header.Access-Control-Allow-Origin": "'*'",
+                      "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
+                      "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
+                    },
+                    "ResponseTemplates": {
+                      "application/json": "#set($origin = $input.params(\"Origin\"))\n#if($origin == \"\") #set($origin = $input.params(\"origin\")) #end\n#if($origin.matches(\".+\")) #set($context.responseOverride.header.Access-Control-Allow-Origin = $origin) #end"
+                    }
+                  }
+                ]
+              },
+              "ResourceId": {
+                "Ref": "ApiGatewayResourceAuthenticate"
+              },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               }
@@ -721,7 +946,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1623309370869": {
+          "ApiGatewayDeployment1623593686861": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -730,6 +955,11 @@
               "StageName": "dev"
             },
             "DependsOn": [
+              "ApiGatewayMethodSignupOptions",
+              "ApiGatewayMethodLoginOptions",
+              "ApiGatewayMethodAddDashnewDashfavouriteOptions",
+              "ApiGatewayMethodGetDashfavouritesIdVarOptions",
+              "ApiGatewayMethodAuthenticateOptions",
               "ApiGatewayMethodSignupPost",
               "ApiGatewayMethodLoginPost",
               "ApiGatewayMethodAddDashnewDashfavouritePost",
@@ -935,7 +1165,7 @@
           "SignUpLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "SignUpLambdaVersiono2yJDtYjRQVKXc6oGyUWz7Ym9lubvw9cJ1JcbmE"
+              "Ref": "SignUpLambdaVersion15erJokQbycYrzN7l0XFoAKRwntR42KmxIa3Y32Q"
             },
             "Export": {
               "Name": "sls-movie-rating-system-dev-SignUpLambdaFunctionQualifiedArn"
@@ -944,7 +1174,7 @@
           "LoginLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "LoginLambdaVersion8kI7LKaxBIlUMOobowjMOc0pdK6cblHfBg2tDHnmU"
+              "Ref": "LoginLambdaVersionlwKqyTl0EDWycjgiPAvwo3VMp5T4tVt6LWMR9gDyeXo"
             },
             "Export": {
               "Name": "sls-movie-rating-system-dev-LoginLambdaFunctionQualifiedArn"
@@ -953,7 +1183,7 @@
           "AddNewFavouriteLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AddNewFavouriteLambdaVersionFhVurl0yhsNS3Fafrp9E7gZ641kIhIS9wPafAJqB4"
+              "Ref": "AddNewFavouriteLambdaVersionR9dwhKhI6GeAxblhkXzPDQl19YzbQSd9Uf73dDrvoE"
             },
             "Export": {
               "Name": "sls-movie-rating-system-dev-AddNewFavouriteLambdaFunctionQualifiedArn"
@@ -962,7 +1192,7 @@
           "GetFavouritesLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetFavouritesLambdaVersionfNuBASdrXjNyedP9dTjPbuiWxWreSmR9aUqudc1tEQ"
+              "Ref": "GetFavouritesLambdaVersionfSh1CIRVBEX1hZSrq8YrfIVAygjgjN5K62grSQRmJE"
             },
             "Export": {
               "Name": "sls-movie-rating-system-dev-GetFavouritesLambdaFunctionQualifiedArn"
@@ -971,7 +1201,7 @@
           "AuthenticateLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AuthenticateLambdaVersionGrYROTX1xPbXia0iH1hLjrOX7kforQseGu78BLqWpw"
+              "Ref": "AuthenticateLambdaVersion4woEHD1jcPGWICsYpddvsRgOOT6gf7dBUcehK1CxDkk"
             },
             "Export": {
               "Name": "sls-movie-rating-system-dev-AuthenticateLambdaFunctionQualifiedArn"
@@ -1101,7 +1331,22 @@
             "http": {
               "path": "signup",
               "method": "post",
-              "cors": false,
+              "cors": {
+                "origin": "http://frontend-657412319.ap-southeast-2.elb.amazonaws.com",
+                "methods": [
+                  "OPTIONS",
+                  "POST"
+                ],
+                "allowCredentials": false,
+                "headers": [
+                  "Content-Type",
+                  "X-Amz-Date",
+                  "Authorization",
+                  "X-Api-Key",
+                  "X-Amz-Security-Token",
+                  "X-Amz-User-Agent"
+                ]
+              },
               "integration": "AWS_PROXY"
             }
           }
@@ -1112,7 +1357,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "SignUpLambdaVersiono2yJDtYjRQVKXc6oGyUWz7Ym9lubvw9cJ1JcbmE"
+        "versionLogicalId": "SignUpLambdaVersion15erJokQbycYrzN7l0XFoAKRwntR42KmxIa3Y32Q"
       },
       "login": {
         "handler": "src/endpoints/login.handler",
@@ -1121,7 +1366,25 @@
             "http": {
               "path": "login",
               "method": "post",
-              "cors": false,
+              "cors": {
+                "origins": [
+                  "*"
+                ],
+                "origin": "*",
+                "methods": [
+                  "OPTIONS",
+                  "POST"
+                ],
+                "headers": [
+                  "Content-Type",
+                  "X-Amz-Date",
+                  "Authorization",
+                  "X-Api-Key",
+                  "X-Amz-Security-Token",
+                  "X-Amz-User-Agent"
+                ],
+                "allowCredentials": false
+              },
               "integration": "AWS_PROXY"
             }
           }
@@ -1132,7 +1395,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "LoginLambdaVersion8kI7LKaxBIlUMOobowjMOc0pdK6cblHfBg2tDHnmU"
+        "versionLogicalId": "LoginLambdaVersionlwKqyTl0EDWycjgiPAvwo3VMp5T4tVt6LWMR9gDyeXo"
       },
       "addNewFavourite": {
         "handler": "src/endpoints/add-favourite.handler",
@@ -1141,7 +1404,25 @@
             "http": {
               "path": "add-new-favourite",
               "method": "post",
-              "cors": false,
+              "cors": {
+                "origins": [
+                  "*"
+                ],
+                "origin": "*",
+                "methods": [
+                  "OPTIONS",
+                  "POST"
+                ],
+                "headers": [
+                  "Content-Type",
+                  "X-Amz-Date",
+                  "Authorization",
+                  "X-Api-Key",
+                  "X-Amz-Security-Token",
+                  "X-Amz-User-Agent"
+                ],
+                "allowCredentials": false
+              },
               "integration": "AWS_PROXY"
             }
           }
@@ -1152,7 +1433,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "AddNewFavouriteLambdaVersionFhVurl0yhsNS3Fafrp9E7gZ641kIhIS9wPafAJqB4"
+        "versionLogicalId": "AddNewFavouriteLambdaVersionR9dwhKhI6GeAxblhkXzPDQl19YzbQSd9Uf73dDrvoE"
       },
       "getFavourites": {
         "handler": "src/endpoints/get-favourites.handler",
@@ -1161,7 +1442,25 @@
             "http": {
               "path": "get-favourites/{ID}",
               "method": "get",
-              "cors": false,
+              "cors": {
+                "origins": [
+                  "*"
+                ],
+                "origin": "*",
+                "methods": [
+                  "OPTIONS",
+                  "GET"
+                ],
+                "headers": [
+                  "Content-Type",
+                  "X-Amz-Date",
+                  "Authorization",
+                  "X-Api-Key",
+                  "X-Amz-Security-Token",
+                  "X-Amz-User-Agent"
+                ],
+                "allowCredentials": false
+              },
               "integration": "AWS_PROXY"
             }
           }
@@ -1172,7 +1471,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "GetFavouritesLambdaVersionfNuBASdrXjNyedP9dTjPbuiWxWreSmR9aUqudc1tEQ"
+        "versionLogicalId": "GetFavouritesLambdaVersionfSh1CIRVBEX1hZSrq8YrfIVAygjgjN5K62grSQRmJE"
       },
       "authenticate": {
         "handler": "src/endpoints/authenticate.handler",
@@ -1181,7 +1480,25 @@
             "http": {
               "path": "authenticate",
               "method": "get",
-              "cors": false,
+              "cors": {
+                "origins": [
+                  "*"
+                ],
+                "origin": "*",
+                "methods": [
+                  "OPTIONS",
+                  "GET"
+                ],
+                "headers": [
+                  "Content-Type",
+                  "X-Amz-Date",
+                  "Authorization",
+                  "X-Api-Key",
+                  "X-Amz-Security-Token",
+                  "X-Amz-User-Agent"
+                ],
+                "allowCredentials": false
+              },
               "integration": "AWS_PROXY"
             }
           }
@@ -1192,7 +1509,7 @@
         "timeout": 6,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "AuthenticateLambdaVersionGrYROTX1xPbXia0iH1hLjrOX7kforQseGu78BLqWpw"
+        "versionLogicalId": "AuthenticateLambdaVersion4woEHD1jcPGWICsYpddvsRgOOT6gf7dBUcehK1CxDkk"
       }
     },
     "configValidationMode": "warn",
@@ -1214,10 +1531,10 @@
       }
     },
     "isDashboardMonitoringPreconfigured": false,
-    "artifact": "/home/shafin/Desktop/upwork-gourav-movie/.serverless/movie-rating-system.zip"
+    "artifact": "/Users/shajalahamed/Desktop/upwork/gourav/movie-project/services/backend/.serverless/movie-rating-system.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/movie-rating-system/dev/1623309372695-2021-06-10T07:16:12.695Z",
+    "artifactDirectoryName": "serverless/movie-rating-system/dev/1623593687803-2021-06-13T14:14:47.803Z",
     "artifact": "movie-rating-system.zip"
   }
 }

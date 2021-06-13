@@ -344,3 +344,9 @@ Click "Add to load balancer".
 "Target group name": frontend-tg
 
 
+### Elastic Beanstalk
+
+    $ eb init
+    option selected: 8,2,default,y,1,y,
+    $ eb create
+    option selected: default,default,2n,y,t2.micro,enter
