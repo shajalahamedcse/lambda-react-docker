@@ -25,33 +25,32 @@ functions:
       - http:
           path: signup
           method: POST
-          cors: 
-            origin: 'http://frontend-657412319.ap-southeast-2.elb.amazonaws.com'
+          cors: false
   login:
     handler: src/endpoints/login.handler
     events:
       - http:
           path: login
           method: POST
-          cors: true
+          cors: flase
   addNewFavourite:
     handler: src/endpoints/add-favourite.handler
     events:
       - http:
           path: add-new-favourite
           method: POST
-          cors: true
+          cors: flase
   getFavourites:
     handler: src/endpoints/get-favourites.handler
     events:
       - http:
           path: get-favourites/{ID}
           method: GET
-          cors: true
+          cors: false
   authenticate:
     handler: src/endpoints/authenticate.handler
     events:
       - http:
           path: authenticate
           method: GET
-          cors: true
+          cors: false
