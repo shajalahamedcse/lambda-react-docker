@@ -165,9 +165,13 @@ function Favourite(props) {
       setError(null);
       await get.map(async (result) => {
         console.log("fav item: " + result);
+        // const response = await axios.get(
+        //   `http://www.omdbapi.com/?i=${result}&apikey=${API_KEY}`
+        // );
         const response = await axios.get(
           `http://www.omdbapi.com/?i=${result}&apikey=${API_KEY}`
         );
+
 
         console.log("movie details: " + JSON.stringify(response.data));
 
