@@ -4,8 +4,8 @@ const Dynamo = require("./Dynamo");
 const tableName = process.env.tableName;
 
 // TODO: private key not generated
-var privateKey = fs.readFileSync("private.key");
-
+// var privateKey = fs.readFileSync("private.key");
+var privateKey = '123456'
 const JWT = {
   async generateToken(id) {
     var token = await jwt.sign({ id }, privateKey, {
